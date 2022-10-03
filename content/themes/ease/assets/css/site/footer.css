@@ -1,0 +1,7 @@
+footer {
+    background-color: var(--primary-color);
+}
+
+.gh-foot.gh-outer {
+    background-color: red;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+
+    <link rel="stylesheet" href="{{asset "built/styles.css"}}">
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{block "body_class"}} is-head-b--n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<div class="site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner gh-inner">
+
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+            </div>
+            <button class="gh-burger"></button>
+        </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+
+            <ul class="nav">
+                <li><a href="/tag/enterprise">Enterprise</a>
+                    <!-- start menu desplegable 
+                    <ul>
+                        {{#get "posts" filter="featured:true" limit="all" include="enterprise" as |featured|}}
+                            {{#foreach featured}}
+                                <li class="topic-article">
+                                    <a class="topic-article-link" href="{{url}}">
+                                        {{title}}
+                                    </a>
+                                </li>
+                            {{/foreach}}
+                        {{/get}}
+                    </ul>
+                    end menu desplegable -->
+                </li>
+                <li><a href="/tag/franquicias">Franquicias</a></li>
+            </ul>
+
+
+            <ul class="nav-social">
+                <li><a href="https://wa.me/+523317878856" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a href="http://t.me/selliasoportebot" target="_blank"><i class="bi bi-telegram"></i></a></li>
+                <li><a href="https://m.me/sellia.business" target="_blank"><i class="bi bi-messenger"></i></a></li>
+            </ul>
+        </nav>
+
+    </div>
+    </header>
+
+    {{#is "home"}}
+    <div class="site-cover{{#unless @site.cover_image}} no-image{{/unless}} u-overlay">
+
+        {{#if @site.cover_image}}
+            <img class="cover-image jarallax-img u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+        {{/if}}
+
+        <div class="cover-content">
+            {{#if @site.description}}
+                <div class="cover-description">{{@site.description}}</div>
+            {{/if}}
+            <div class="search">
+                <form class="search-form">
+                    <div class="form-wrapper">
+                        <div class="search-field" data-ghost-search>Ingresa tu búsqueda</div>
+                        <button class="form-button search-button" type="submit" data-ghost-search>
+                            {{> "icons/search"}}
+                            {{> "icons/close"}}
+                        </button>
+                    </div>
+                </form>
+                <div class="search-result"></div>
+            </div>
+        </div>
+    </div>
+    {{/is}}
+
+    <div class="site-content">
+        {{{body}}}
+    </div>
+
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-logo">
+                <a href="{{@site.url}}"><img src="/assets/images/logo-white.png" alt="{{@site.title}}"></a>
+            </div>
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
+
+            <nav class="gh-foot-menu">
+                <ul class="nav-social">
+                    <li><a href="https://www.instagram.com/sellia_business/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/sellia.business/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://mx.linkedin.com/company/sellia-business" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="gh-powered-by">
+                <a href="https://sellia.com.mx/" target="_blank" rel="noopener">© Powered by Sellia</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+</script>
+<script src="{{asset "built/main.min.js"}}"></script>
+
+{{ghost_foot}}
+
+</body>
+</html>
