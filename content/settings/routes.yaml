@@ -1,6 +1,14 @@
 routes:
 
 collections:
+  /enterprise/:
+    permalink: /enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag-enterprise
+  /franquicias/:
+    permalink: /franquicias/{slug}/
+    filter: tag:hash-franquicias
+    template: tag-franquicias
   /:
     permalink: /{slug}/
     template: index
