@@ -1,0 +1,17 @@
+routes:
+
+collections:
+  /enterprise/:
+    permalink: /enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag
+  /franquicias/:
+    permalink: /franquicias/{slug}/
+    filter: tag:hash-franquicias
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
