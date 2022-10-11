@@ -14,7 +14,7 @@
         <section class="topic">
                 <header class="topic-header">
                     <h2 class="topic-name">
-                        <a href="/enterprise/">Enterprise</a>
+                        Enterprise
                     </h2>
                 </header>
 
@@ -60,12 +60,11 @@
                                 </h3>
                             </li>                            
                     </ul>
-                <a class="topic-more" href="/enterprise/">Leer más</a>
         </section>
                 <section class="topic">
                 <header class="topic-header">
                     <h2 class="topic-name">
-                        <a href="/franquicias/">Franquicias</a>
+                        Franquicias
                     </h2>
                 </header>
 
@@ -111,35 +110,7 @@
                                 </h3>
                             </li>                            
                     </ul>
-                <a class="topic-more" href="/franquicias/">Leer más</a>
         </section>
-
-            {{!-- {{#foreach tags }}
-                
-                    <section class="topic">
-                        <header class="topic-header">
-                            <h2 class="topic-name">
-                                <a href="{{url}}">{{name}}</a>
-                            </h2>
-                        </header>
-
-                        {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
-                            <ul class="topic-article-feed">
-                                {{#foreach featured}}
-                                <li class="topic-article">
-                                    <h3 class="topic-article-title">
-                                        <a class="topic-article-link" href="{{url}}">
-                                            {{> "icons/chevron-right"}} {{title}}
-                                        </a>
-                                    </h3>
-                                </li>
-                                {{/foreach}}
-                            </ul>
-                        {{/get}}
-                        <a class="topic-more" href="{{url}}">Leer más</a>
-                    </section>
-                
-            {{/foreach}} --}}
     </div>
     {{/get}}
 
