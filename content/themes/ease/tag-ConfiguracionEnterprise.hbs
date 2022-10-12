@@ -1,0 +1,38 @@
+{{!< default}}
+
+<main class="site-main">
+
+	<div class="term-container gh-canvas">
+		<section class="term">
+			<h1 class="term-name">Configuracion</h1>
+
+		</section>
+	</div>
+
+	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
+
+		<div class="post-feed gh-canvas">
+			{{#foreach post}}
+				{{#has tag="Configuración"}}
+					<article class="post no-image">
+						<div class="post-wrapper">
+							<header class="post-header">
+								<a href="{{url}}">
+									<h2 class="post-title">{{title}}</h2>
+								</a>
+
+							</header>
+
+						</div>
+					</article>
+				{{else}}
+
+				{{/has}}
+
+			{{/foreach}}
+		</div>
+	{{/get}}
+
+	{{pagination}}
+
+</main>

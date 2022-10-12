@@ -1,0 +1,41 @@
+{{!< default}}
+
+<main class="site-main">
+
+	{{#tag}}
+	<div class="term-container gh-canvas">
+		<section class="term">
+			<h1 class="term-name">{{name}}</h1>
+			{{#if description}}
+				<div class="term-description">{{description}}</div>
+			{{/if}}
+		</section>∂
+	</div>
+	{{/tag}}
+
+	{{!--
+	<div class="post-feed gh-canvas">
+        {{#foreach posts order="published_at asc"}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+	 --}}
+	
+	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" limit="5" as |post|}}
+		<div class="post-feed gh-canvas">
+			{{#foreach posts}}
+				<article class="post tag-hash-enterprise">
+					<div class="post-wrapper">
+						<header class="post-header">
+							<h2 class="post-title">{{tags}}</h2>
+						</header>
+					</div>
+				</article>
+			{{/foreach}}
+		</div>
+	{{/get}}
+	
+
+	{{pagination}}
+
+</main>

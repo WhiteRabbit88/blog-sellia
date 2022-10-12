@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "@tryghost/debug": "^0.1.18",
+    "@tryghost/pretty-cli": "^1.2.31",
+    "@tryghost/release-utils": "^0.8.1",
+    "luxon": "^3.0.4",
+    "moment-timezone": "^0.5.37",
     "node-sass": "^7.0.3",
     "sass": "^1.55.0"
   }

@@ -1,6 +1,38 @@
 routes:
 
 collections:
+  /enterprise/:
+    permalink: /enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag-enterprise
+  /franquicias/:
+    permalink: /franquicias/{slug}/
+    filter: tag:hash-franquicias
+    template: tag-franquicias
+  /primeros-pasos-enterprise/:
+    permalink: /primeros-pasos-enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag-PrimerosPasosEnterprise
+  /primeros-pasos-franquicias/:
+    permalink: /primeros-pasos-franquicias/{slug}/
+    filter: tag:hash-franquicias
+    template: tag-PrimerosPasosFranquicias
+  /configuracion-enterprise/:
+    permalink: /configuracion-enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag-ConfiguracionEnterprise
+  /configuracion-franquicias/:
+    permalink: /configuracion-franquicias/{slug}/
+    filter: tag:hash-franquicias
+    template: tag-ConfiguracionFranquicias
+  /tablero-enterprise/:
+    permalink: /tablero-enterprise/{slug}/
+    filter: tag:hash-enterprise
+    template: tag-TableroEnterprise
+  /tablero-franquicias/:
+    permalink: /tablero-franquicias/{slug}/
+    filter: tag:hash-franquicias
+    template: tag-TableroFranquicias
   /:
     permalink: /{slug}/
     template: index
