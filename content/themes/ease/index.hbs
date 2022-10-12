@@ -8,69 +8,297 @@
     {{/if}}
 
     {{#get "tags" limit="all"}}
+
     <div class="topic-feed">
+        <section class="topic">
+            <header class="topic-header">
+                <h2 class="topic-name">
+                    <a href="/enterprise/">Enterprise</a>
+                </h2>
+            </header>
 
-        <div class="enterprise-section">
-            <h1>Enterprise</h1>
+            <ul class="topic-article-feed">
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/primeros-pasos-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Primeros pasos
+                        </a>
+                    </h3>
 
-            {{#foreach tags }}
-                
-                    <section class="topic">
-                        <header class="topic-header">
-                            <h2 class="topic-name">
-                                <a href="{{url}}">{{name}}</a>
-                            </h2>
-                        </header>
-                        {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
-                            <ul class="topic-article-feed">
-                                {{#foreach featured}}
-                                <li class="topic-article">
-                                    <h3 class="topic-article-title">
-                                        <a class="topic-article-link" href="{{url}}">
-                                            {{> "icons/chevron-right"}} {{title}}
-                                        </a>
-                                    </h3>
-                                </li>
-                                {{/foreach}}
-                            </ul>
-                        {{/get}}
-                        <a class="topic-more" href="{{url}}">Leer más</a>
-                    </section>
-                
-            {{/foreach}}
-        </div>
-
-        <div class="franquicias-section">
-            <h1>Franquicias</h1>
-
-            {{#foreach tags}}
-                <section class="topic">
-                    <header class="topic-header">
-                        <h2 class="topic-name">
-                            <a href="{{url}}">{{name}}</a>
-                        </h2>
-                    </header>
-                    {{#get "posts" order="published_at asc" filter="tag:{{slug}}" limit="5" as |featured|}}
-                        <ul class="topic-article-feed">
-                            {{#foreach featured}}
-                            <li class="topic-article">
-                                <h3 class="topic-article-title">
-                                    <a class="topic-article-link" href="{{url}}">
-                                        {{> "icons/chevron-right"}} {{title}}
-                                    </a>
-                                </h3>
-                            </li>
+                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post }}
+                                {{#has tag="Primeros pasos enterprise" limit="4" }}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
                             {{/foreach}}
-                        </ul>
+                        </div>
                     {{/get}}
-                    <a class="topic-more" href="{{url}}">Leer más</a>
-                </section>
-            {{/foreach}}
-        </div>
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/usuarios">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Usuarios
+                        </a>
+                    </h3>
 
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="Usuarios"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/configuracion-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Campañas
+                        </a>
+                    </h3>
 
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="campanas-enterprise"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/templates">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Templates
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="templates-enterprise"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tablero-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Tablero e información adicional
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tablero-enterprise"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>                            
+            </ul>
+
+             <a class="topic-more" href="/enterprise/">Leer más</a>
+        </section>
+        <section class="topic">
+            <header class="topic-header">
+                <h2 class="topic-name">
+                    <a href="/franquicias/">Franquicias</a>
+                </h2>
+            </header>
+
+            <ul class="topic-article-feed">
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/primeros-pasos-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Primeros pasos
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="primeros-franquicias"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/usuarios-permisos">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Usuarios y permisos
+                        </a>
+                    </h3>
+
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="usuarios-franquicias"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/configuracion-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Configuracion
+                        </a>
+                    </h3>
+
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="configuracion-franquicias"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/tienda">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Tienda
+                        </a>
+                    </h3>
+
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tienda-franquicias"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tablero-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Gráficas e información adicional
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tienda-franquicias"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>                            
+            </ul>
+
+             <a class="topic-more" href="/franquicias/">Leer más</a>
+        </section>
     </div>
     {{/get}}
+
+
+
 
 </main>
 </div>
