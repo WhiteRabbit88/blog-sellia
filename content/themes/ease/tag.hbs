@@ -1,11 +1,13 @@
 {{!< default}}
 
+{{>"tag-search"}}
+
 <main class="site-main">
 
     {{#tag}}
-    <div class="term-container gh-canvas">
-        <section class="term">
-            <h1 class="term-name">{{name}}</h1>
+    <div class="term-container gh-canvas ">
+        <section class="term tag-title-underline">
+            <h1 style="font-size: 50px" class="term-name">{{name}}</h1>
             {{#if description}}
                 <div class="term-description">{{description}}</div>
             {{/if}}
@@ -13,10 +15,15 @@
     </div>
     {{/tag}}
 
+
+
     <div class="post-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+            <div class="topic-feed">
+                {{#foreach posts}}
+                        {{> "loop-image"}}
+                {{/foreach}}
+    </div>
+
     </div>
 
     {{pagination}}
