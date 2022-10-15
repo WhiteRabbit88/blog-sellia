@@ -37,25 +37,80 @@
         <nav class="gh-head-menu">
             {{navigation}}
 
+
+
             <ul class="nav">
-                <li><a href="/tag/enterprise">Enterprise</a>
-                    <!-- start menu desplegable 
-                    <ul>
-                        {{#get "posts" filter="featured:true" limit="all" include="enterprise" as |featured|}}
-                            {{#foreach featured}}
-                                <li class="topic-article">
-                                    <a class="topic-article-link" href="{{url}}">
-                                        {{title}}
+                <div class="dropdown">
+                <li class="nav-dropdown-item">Enterprise {{> "icons/chevron-down"}}</li>
+                    <ul class="dropdown-content">
+                                <li>
+                                    <a href="/primeros-pasos-enterprise/">
+                                        Primeros pasos
                                     </a>
                                 </li>
-                            {{/foreach}}
-                        {{/get}}
+                                <li>
+                                    <a href="/tag/usuarios">
+                                        Usuarios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/configuracion-enterprise/">
+                                        Campañas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tag/templates">
+                                        Templates
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tablero-enterprise/">
+                                        Tablero e información adicional
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="/enterprise/">
+                                        Ver más...
+                                    </a>
+                                </li>
                     </ul>
-                    end menu desplegable -->
-                </li>
-                <li><a href="/tag/franquicias">Franquicias</a></li>
+                </div>
+                <div class="dropdown">
+                    <li class="nav-dropdown-item">Franquicias {{> "icons/chevron-down"}}</li>
+                            <ul class="dropdown-content">
+                                <li >
+                                    <a  href="/primeros-pasos-franquicias/">
+                                        Primeros pasos
+                                    </a>
+                                </li>
+                                <li >
+                                    <a  href="/tag/usuarios-permisos">
+                                        Usuarios y permisos
+                                    </a>
+                                </li>
+                                <li >
+                                    <a  href="/configuracion-franquicias/">
+                                        Configuración
+                                    </a>
+                                </li>
+                                <li >
+                                    <a  href="/tag/tienda">
+                                        Tienda
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="/tablero-franquicias/">
+                                        Gráficas e información adicional
+                                    </a>
+                                </li>
+                                <li >
+                                    <a  href="/franquicias/">
+                                        Ver más...
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
             </ul>
-
 
             <ul class="nav-social">
                 <li><a href="https://wa.me/+523317878856" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
@@ -135,6 +190,9 @@
     crossorigin="anonymous">
 </script>
 <script src="{{asset "built/main.min.js"}}"></script>
+
+
+
 
 {{ghost_foot}}
 
