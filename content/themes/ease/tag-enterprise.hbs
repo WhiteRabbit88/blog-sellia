@@ -3,31 +3,59 @@
 
 <main class="site-main">
 
-	{{#tag}}
 		<div class="term-container gh-canvas">
 			<section class="term">
-				<h1 class="term-name">{{name}}</h1>
+				<h1 class="term-name">Enterprise</h1>
 				{{#if description}}
 					<div class="term-description">{{description}}</div>
 				{{/if}}
 			</section>
 		</div>
-	{{/tag}}
 
-	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" limit="5" as |post|}}
-		<div class="post-feed gh-canvas">
-			{{#foreach posts}}
-				<article class="post tag-hash-enterprise no-image">
-					<div class="post-wrapper">
-						<header class="post-header">
-							<h2 class="post-title">{{tags}}</h2>
-						</header>
-					</div>
-				</article>
-			{{/foreach}}
+	{{#get "tags"  limit='all'}}
+	<div class="post-feed gh-canvas">
+		<div style="grid-template-columns: 1fr 1fr 1fr" class="topic-feed">
+			{{#foreach tags}} 
+				{{#has slug="primeros-pasos-enterprise" limit="1" }}
+				<a href="/primeros-pasos-enterprise">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+			{{#foreach tags}} 
+				{{#has slug="usuarios-enterprise" limit="1" }}
+				<a href="/tag/usuarios">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="campanas-enterprise" limit="1" }}
+				<a href="/campanas-enterprise/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="templates-enterprise" limit="1" }}
+				<a href="/tag/templates">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="tablero-enterprise" limit="1" }}
+				<a href="/tablero-enterprise/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
 		</div>
-	{{/get}}
-
+	</div>
+	 {{/get}}
 	{{pagination}}
 
 </main>
