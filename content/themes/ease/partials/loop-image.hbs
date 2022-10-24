@@ -1,0 +1,22 @@
+<article style="border-top: none" class="{{post_class}} loop-image-article">
+
+	<a class="post-link u-permalink" href="{{url}}"></a>
+
+	{{#if feature_image}}
+		<a class="" href="{{url}}">
+			<img class="loop-image" src="{{img_url feature_image size="l"}}" alt="{{title}}" />
+		</a>
+	{{/if}}
+
+	<div class="post-wrapper">
+		<header class="post-header">
+			<h5 class="post-title">{{title}}</h5>
+		</header>
+		<div class="post-excerpt">
+			{{excerpt words="25"}}...
+		</div>
+	</div>
+	<div class="loop-tags">
+		{{tags}}
+	</div>
+</article>

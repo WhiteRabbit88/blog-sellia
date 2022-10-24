@@ -4,7 +4,9 @@
 
     {{#post}}
 
-    <article class="{{post_class}}">
+    {{> share-block}}
+
+    <article class="{{post_class}} post-padding-left">
 
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
@@ -25,7 +27,11 @@
             <div class="pagination-left">
                 {{#prev_post}}
                     <a class="newer-posts" href="{{url}}">
-                        <span class="pagination-label">Anterior</span>
+                        <span class="pagination-label">
+                            <svg class="chevron-down" width="30" height="30" transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+                            </svg>
+                        </span>
                         <span class="pagination-title">{{title}}</span>
                     </a>
                 {{/prev_post}}
@@ -34,7 +40,11 @@
             <div class="pagination-right">
                 {{#next_post}}
                     <a class="older-posts" href="{{url}}">
-                        <span class="pagination-label">Siguiente</span>
+                        <span class="pagination-label">
+                            <svg class="chevron-down" width="30" height="30" transform="rotate(0)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+                            </svg>
+                        </span>
                         <span class="pagination-title">{{title}}</span>
                     </a>
                 {{/next_post}}

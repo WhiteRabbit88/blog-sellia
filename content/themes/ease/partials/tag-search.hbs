@@ -1,0 +1,24 @@
+    
+    <div class="site-cover{{#unless @site.cover_image}} no-image{{/unless}} u-overlay search-internal">
+
+        {{#if @site.cover_image}}
+            <img class="cover-image jarallax-img u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+        
+        {{/if}}
+        <div class="cover-content">
+            <div style="margin: 0" class="search">
+                <form class="search-form">
+                    <div class="form-wrapper">
+                        <div class="search-field" data-ghost-search>Ingresa tu búsqueda</div>
+
+
+                        <button class="form-button search-button" type="submit" data-ghost-search onclick="setTimeout(function(){document.getElementById('sodo-search-root').querySelector('iframe').contentWindow.document.querySelector('input').placeholder = 'Your placeholder text'},200)" data-ghost-search>
+                             {{> "icons/search"}}
+                            {{> "icons/close"}}
+                        </button>
+                    </div>
+                </form>
+                <div class="search-result"></div>
+            </div>
+        </div>
+    </div>

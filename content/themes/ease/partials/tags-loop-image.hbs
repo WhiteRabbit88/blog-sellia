@@ -1,0 +1,22 @@
+<article style="border-top: none" class="{{post_class}} loop-image-article">
+
+	{{#if feature_image}}
+		<img class="loop-image" src="{{img_url feature_image size="l"}}" alt="{{title}}" />
+	{{/if}}
+
+	<div class="post-wrapper">
+		<header class="post-header">
+			{{#has slug="campanas-enterprise"}}
+				<h5 class="post-title">Campañas</h5>
+			{{else}}
+				<h5 class="post-title">{{name}}</h5>
+			{{/has}}
+		</header>
+		<div class="post-excerpt ubuntu-excerpt">
+			{{description}}
+		</div>
+	</div>
+	<div class="loop-tags">
+		{{tags}}
+	</div>
+</article>

@@ -1,37 +1,58 @@
 {{!< default}}
+{{>"tag-search"}}
+
 
 <main class="site-main">
 
-	{{#tag}}
-		<div class="term-container gh-canvas">
-			<section class="term">
-				<h1 class="term-name">{{name}}</h1>
-				{{#if description}}
-					<div class="term-description">{{description}}</div>
-				{{/if}}
-			</section>
-		</div>
-	{{/tag}}
+	<div class="term-container gh-canvas">
+		<section class="term tag-title-underline">
+			<h1 class="term-name">Franquicias</h1>
+			{{#if description}}
+				<div class="term-description">{{description}}</div>
+			{{/if}}
+		</section>
+	</div>
 
-	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" limit="5" as |post|}}
-		{{!-- {{#post}}
-            {{tags}}
-        {{/post}} --}}
-
-		<div class="post-feed gh-canvas">
-			{{#foreach posts}}
-				<article class="post tag-hash-franquicias no-image">
-					<div class="post-wrapper">
-						<header class="post-header">
-							<h2 class="post-title">{{tags}}</h2>
-						</header>
-
-					</div>
-				</article>
+	{{#get "tags"  limit='all'}}
+	<div class="post-feed gh-canvas">
+		<div class="topic-feed">
+			{{#foreach tags}} 
+				{{#has slug="primeros-pasos-franquicias" limit="1" }}
+				<a href="/tag/primeros-pasos-franquicias">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+			{{#foreach tags}} 
+				{{#has slug="usuarios-franquicias" limit="1" }}
+				<a href="/tag/usuarios">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
 			{{/foreach}}
+			{{#foreach tags}} 
+				{{#has slug="configuracion-franquicias" limit="1" }}
+				<a href="/tag/configuracion-franquicias/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}}
+			{{#foreach tags}} 
+				{{#has slug="tienda-franquicias" limit="1" }}
+				<a href="/tag/tienda">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}}
+			{{#foreach tags}} 
+				{{#has slug="graficas-franquicias" limit="1" }}
+				<a href="/tag/tablero-franquicias/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
 		</div>
-	{{/get}}
-
-	{{pagination}}
+	</div>
+	 {{/get}}
 
 </main>

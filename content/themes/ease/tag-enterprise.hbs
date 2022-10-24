@@ -1,41 +1,60 @@
 {{!< default}}
+{{>"tag-search"}}
 
 <main class="site-main">
-
-	{{#tag}}
 	<div class="term-container gh-canvas">
-		<section class="term">
-			<h1 class="term-name">{{name}}</h1>
+		<section class="term tag-title-underline">
+			<h1 class="term-name">Enterprise</h1>
 			{{#if description}}
 				<div class="term-description">{{description}}</div>
 			{{/if}}
-		</section>∂
+		</section>
 	</div>
-	{{/tag}}
 
-	{{!--
+	{{#get "tags" limit='all'}}
 	<div class="post-feed gh-canvas">
-        {{#foreach posts order="published_at asc"}}
-            {{> "loop"}}
-        {{/foreach}}
-    </div>
-	 --}}
-	
-	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" limit="5" as |post|}}
-		<div class="post-feed gh-canvas">
-			{{#foreach posts}}
-				<article class="post tag-hash-enterprise">
-					<div class="post-wrapper">
-						<header class="post-header">
-							<h2 class="post-title">{{tags}}</h2>
-						</header>
-					</div>
-				</article>
-			{{/foreach}}
-		</div>
-	{{/get}}
-	
+		<div class="topic-feed">
+			{{#foreach tags}} 
+				{{#has slug="primeros-pasos-enterprise" limit="1" }}
+				<a href="/tag/primeros-pasos-enterprise/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+			
+			{{#foreach tags}} 
+				{{#has slug="usuarios-enterprise" limit="1" }}
+				<a href="/tag/usuarios-enterprise">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
 
-	{{pagination}}
+			{{#foreach tags}} 
+				{{#has slug="campanas-enterprise" limit="1" }}
+				<a href="/tag/campanas-enterprise/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="templates-enterprise" limit="1" }}
+				<a href="/tag/templates">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="tablero-enterprise" limit="1" }}
+				<a href="/tag/tablero-enterprise/">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+		</div>
+	</div>
+	 {{/get}}
 
 </main>

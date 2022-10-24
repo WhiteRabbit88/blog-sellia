@@ -11,24 +11,13 @@
 	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
 
 		<div class="post-feed gh-canvas">
+			<div class="topic-feed">
 			{{#foreach post}}
 				{{#has tag="Primeros pasos"}}
-					<article class="post no-image">
-						<div class="post-wrapper">
-							<header class="post-header">
-								<a href="{{url}}">
-									<h2 class="post-title">{{title}}</h2>
-								</a>
-
-							</header>
-
-						</div>
-					</article>
-				{{else}}
-
+                        {{> "loop-image"}}
 				{{/has}}
-
 			{{/foreach}}
+			</div>
 		</div>
 	{{/get}}
 
