@@ -9,7 +9,7 @@
 		</section>
 	</div>
 
-	{{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
+	{{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
 
 		<div class="post-feed gh-canvas">
 			<div class="topic-feed">
@@ -17,6 +17,9 @@
 				{{#has tag="Primeros pasos enterprise"}}
                         {{> "loop-image"}}
 				{{/has}}
+
+				{{else}}
+                    <p>No hay publicaciones en esta categoría</p>    
 			{{/foreach}}
 			</div>
 		</div>

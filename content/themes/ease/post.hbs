@@ -4,7 +4,11 @@
 
     {{#post}}
 
-    {{> share-block}}
+            <aside class="gh-sidebar">
+            {{> share-block}}
+
+            <div class="gh-toc"></div>
+            </aside> {{! The TOC will be inserted here }}
 
     <article class="{{post_class}} post-padding-left">
 
@@ -18,6 +22,8 @@
         </header>
 
         <div class="gh-content gh-canvas">
+
+
             {{content}}
         </div>
 

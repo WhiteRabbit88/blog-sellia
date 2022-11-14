@@ -9,13 +9,7 @@
             <div style="margin: 0" class="search">
                 <form class="search-form">
                     <div class="form-wrapper">
-                        <div class="search-field" data-ghost-search>Ingresa tu búsqueda</div>
-
-
-                        <button class="form-button search-button" type="submit" data-ghost-search onclick="setTimeout(function(){document.getElementById('sodo-search-root').querySelector('iframe').contentWindow.document.querySelector('input').placeholder = 'Your placeholder text'},200)" data-ghost-search>
-                             {{> "icons/search"}}
-                            {{> "icons/close"}}
-                        </button>
+                        <div class="search-field" onclick="setTimeout(function(){document.getElementById('sodo-search-root').querySelector('iframe').contentWindow.document.querySelector('input').placeholder = 'Busca posteos, tags o noticias'},200)" data-ghost-search>Ingresa tu búsqueda</div>
                     </div>
                 </form>
                 <div class="search-result"></div>

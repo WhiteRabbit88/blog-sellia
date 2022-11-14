@@ -25,7 +25,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" limit="all" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                    {{#get "posts" include="tags" limit="all" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post }}
                                 {{#has tag="Primeros pasos enterprise"}}
@@ -43,6 +43,33 @@
                         </div>
                     {{/get}}
                 </li>
+
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/agente/">
+                            Agente
+                        </a>
+                    </h3>
+
+                    {{#get "posts" include="tags" limit="all" order="published_at desc" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post }}
+                                {{#has tag="agente"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+
                 <li class="topic-article">
                     <h3 class="topic-article-title">
                         <a class="topic-article-link" href="/tag/usuarios-enterprise">
@@ -50,7 +77,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                    {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Usuarios"}}
@@ -75,7 +102,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                    {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Campañas" limit="6"}}
@@ -100,7 +127,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                    {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="templates"}}
@@ -125,7 +152,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                    {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Tablero e información adicional"}}
@@ -162,7 +189,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" limit="all" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                    {{#get "posts" include="tags" limit="all" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Primeros pasos franquicias"}}
@@ -180,6 +207,33 @@
                         </div>
                     {{/get}}
                 </li>
+
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/agente/">
+                            Agente
+                        </a>
+                    </h3>
+
+                    {{#get "posts" include="tags" limit="all" order="published_at desc" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post }}
+                                {{#has tag="agente"}}
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+
                 <li class="topic-article">
                     <h3 class="topic-article-title">
                         <a class="topic-article-link" href="/tag/usuarios-franquicias">
@@ -187,7 +241,7 @@
                         </a>
                     </h3>
 
-                     {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="usuarios y permisos"}}
@@ -212,7 +266,7 @@
                         </a>
                     </h3>
 
-                     {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="configuracion"}}
@@ -237,7 +291,7 @@
                         </a>
                     </h3>
 
-                     {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="tienda"}}
@@ -262,7 +316,7 @@
                         </a>
                     </h3>
 
-                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                    {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Gráficas e información adicional"}}

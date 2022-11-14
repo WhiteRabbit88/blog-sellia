@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="{{asset "built/styles.css"}}">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    {{!-- TocBot --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
 
     {{ghost_head}}
 </head>
@@ -43,34 +45,25 @@
                     <li class="nav-dropdown-item">Enterprise {{> "icons/chevron-down"}}</li>
                         <ul class="dropdown-content">
                             <li>
-                                <a href="/tag/primeros-pasos-enterprise/">
-                                    Primeros pasos
-                                </a>
+                                <a href="/tag/primeros-pasos-enterprise/">Primeros pasos</a>
                             </li>
                             <li>
-                                <a href="/tag/usuarios-enterprise/">
-                                    Usuarios
-                                </a>
+                                <a href="/tag/agente/">Agente</a>
                             </li>
                             <li>
-                                <a href="/tag/campanas-enterprise/">
-                                    Campañas
-                                </a>
+                                <a href="/tag/usuarios-enterprise/">Usuarios</a>
                             </li>
                             <li>
-                                <a href="/tag/templates-enterprise/">
-                                    Templates
-                                </a>
+                                <a href="/tag/campanas-enterprise/">Campañas</a>
                             </li>
                             <li>
-                                <a href="/tag/tablero-enterprise/">
-                                    Tablero e información adicional
-                                </a>
+                                <a href="/tag/templates-enterprise/">Templates</a>
+                            </li>
+                            <li>
+                                <a href="/tag/tablero-enterprise/">Tablero e información adicional</a>
                             </li>
                             <li >
-                                <a href="/enterprise/">
-                                    Ver más...
-                                </a>
+                                <a href="/enterprise/">Ver más...</a>
                             </li>
                         </ul>
                     </li>
@@ -79,34 +72,25 @@
                     <li class="nav-dropdown-item">Franquicias {{> "icons/chevron-down"}}</li>
                         <ul class="dropdown-content">
                             <li >
-                                <a  href="/tag/primeros-pasos-franquicias/">
-                                    Primeros pasos
-                                </a>
+                                <a  href="/tag/primeros-pasos-franquicias/">Primeros pasos</a>
+                            </li>
+                            <li>
+                                <a href="/tag/agente/">Agente</a>
                             </li>
                             <li >
-                                <a  href="/tag/usuarios-franquicias/">
-                                    Usuarios y permisos
-                                </a>
+                                <a  href="/tag/usuarios-franquicias/">Usuarios y permisos</a>
                             </li>
                             <li >
-                                <a  href="/tag/configuracion-franquicias/">
-                                    Configuración
-                                </a>
+                                <a  href="/tag/configuracion-franquicias/">Configuración</a>
                             </li>
                             <li >
-                                <a  href="/tag/tienda-franquicias/">
-                                    Tienda
-                                </a>
+                                <a  href="/tag/tienda-franquicias/">Tienda</a>
                             </li>
                             <li >
-                                <a href="/tag/graficas-franquicias/">
-                                    Gráficas e información adicional
-                                </a>
+                                <a href="/tag/graficas-franquicias/">Gráficas e información adicional</a>
                             </li>
                             <li >
-                                <a  href="/franquicias/">
-                                    Ver más...
-                                </a>
+                                <a  href="/franquicias/">Ver más...</a>
                             </li>
                         </ul>
                     </li>
@@ -143,11 +127,7 @@
             <div class="search">
                 <form class="search-form">
                     <div class="form-wrapper">
-                        <div class="search-field" data-ghost-search>Ingresa tu búsqueda</div>
-                        <button class="form-button search-button" type="submit" data-ghost-search>
-                            {{> "icons/search"}}
-                            {{> "icons/close"}}
-                        </button>
+                        <div class="search-field" onclick="setTimeout(function(){document.getElementById('sodo-search-root').querySelector('iframe').contentWindow.document.querySelector('input').placeholder = 'Busca posteos, tags o noticias'},200)" data-ghost-search>Ingresa tu búsqueda</div>
                     </div>
                 </form>
                 <div class="search-result"></div>
@@ -195,7 +175,22 @@
     crossorigin="anonymous">
 </script>
 <script src="{{asset "built/main.min.js"}}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
+{{! Initialize Tocbot after you load the script }}
+<script>
+    tocbot.init({
+        headingsOffset: 130,
+        scrollSmoothOffset: -130,
+        // Where to render the table of contents.
+        tocSelector: '.gh-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.gh-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4',
+        // Ensure correct positioning
+        hasInnerContainers: true,
+    });
+</script>
 {{ghost_foot}}
 
 </body>

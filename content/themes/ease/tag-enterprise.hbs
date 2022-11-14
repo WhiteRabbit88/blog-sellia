@@ -21,6 +21,14 @@
 				</a>
 				{{/has}}
 			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="agente" limit="1" }}
+				<a href="/tag/agente">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
 			
 			{{#foreach tags}} 
 				{{#has slug="usuarios-enterprise" limit="1" }}

@@ -13,7 +13,7 @@
 		</section>
 	</div>
 
-	{{#get "tags"  limit='all'}}
+	{{#get "tags"  limit='all' }}
 	<div class="post-feed gh-canvas">
 		<div class="topic-feed">
 			{{#foreach tags}} 
@@ -23,6 +23,15 @@
 				</a>
 				{{/has}}
 			{{/foreach}} 
+
+			{{#foreach tags}} 
+				{{#has slug="agente" limit="1" }}
+				<a href="/tag/agente">
+				{{>"tags-loop-image"}}
+				</a>
+				{{/has}}
+			{{/foreach}} 
+
 			{{#foreach tags}} 
 				{{#has slug="usuarios-franquicias" limit="1" }}
 				<a href="/tag/usuarios">
