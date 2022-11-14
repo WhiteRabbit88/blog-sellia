@@ -79,8 +79,13 @@ a {
 }
 
 .topic-name {
+<<<<<<< HEAD
 	font-size: 4.2rem;
 	font-weight: 900;
+=======
+    font-size: 4.2rem;
+    font-weight: 900;
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
 }
 
 .topic-more {
@@ -125,6 +130,31 @@ a {
 
 .topic-article-link:hover:before {
 	background-color: #2255ff;
+}
+
+.topic-article { margin: 10px 0; }
+
+.topic-article-link {
+    font-size: 2.2rem;
+    font-weight: 900;
+    position: relative;
+    padding-left: 30px;
+}
+
+.topic-article-link:before {
+    content: "";
+    left: 4px;
+    top: calc(50% - 7px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #E2F0FF;
+    transition: .5s ease;
+}
+
+.topic-article-link:hover:before {
+    background-color: #2255FF;
 }
 
 /* Header */
@@ -332,8 +362,13 @@ a {
 /* Body */
 
 .owl-loaded .post {
+<<<<<<< HEAD
 	box-shadow: 0 2px 20px rgb(0 0 0 / 8%);
 	margin-bottom: 20px;
+=======
+    box-shadow: 0 2px 20px rgb(0 0 0 / 8%);
+    margin-bottom: 20px;
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
 }
 
 .featured-posts .post-header {
@@ -375,6 +410,7 @@ a {
 .topic-header a:hover:before {
 	width: 100%;
 }
+<<<<<<< HEAD
 
 .blog-title {
 	display: flex;
@@ -397,6 +433,29 @@ a {
 .gh-foot-inner {
 	align-items: center;
 }
+=======
+.topic-header a:hover:before { width: 100%; }
+
+.blog-title {
+    display: flex;
+    padding: 7px 0;
+    position: relative;
+}
+.blog-title svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: -20px;
+    transition: .3s ease;
+    top: calc(50% - 8px);
+}
+
+.blog-title:hover svg {
+    left: -15px;
+}
+
+.gh-foot-inner {  align-items: center; }
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
 
 @media (min-width: 767px) {
 	.gh-foot-inner {
@@ -481,6 +540,7 @@ a {
 }
 
 .pagination-title {
+<<<<<<< HEAD
 	font-size: 1.5rem;
 	line-height: 1;
 }
@@ -810,4 +870,8 @@ a {
 	.term-name {
 		font-size: 50px;
 	}
+=======
+    font-size: 1.5rem;
+    line-height: 1;
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
 }

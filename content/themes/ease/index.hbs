@@ -8,6 +8,7 @@
     {{/if}}
 
     {{#get "tags" limit="all"}}
+<<<<<<< HEAD
 
     <div class="topic-feed-index">
         <section class="topic">
@@ -29,6 +30,30 @@
                         <div class="gh-canvas">
                             {{#foreach post }}
                                 {{#has tag="Primeros pasos enterprise"}}
+=======
+
+    <div class="topic-feed">
+        <section class="topic">
+            <header class="topic-header">
+                <h2 class="topic-name">
+                    <a href="/enterprise/">Enterprise</a>
+                </h2>
+            </header>
+
+            <ul class="topic-article-feed">
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/primeros-pasos-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Primeros pasos
+                        </a>
+                    </h3>
+
+                    {{#get "posts" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post }}
+                                {{#has tag="Primeros pasos enterprise" limit="4" }}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -43,6 +68,7 @@
                         </div>
                     {{/get}}
                 </li>
+<<<<<<< HEAD
 
                 <li class="topic-article">
                     <h3 class="topic-article-title">
@@ -81,6 +107,19 @@
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Usuarios"}}
+=======
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/usuarios">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Usuarios
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="Usuarios"}}
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -97,6 +136,34 @@
                 </li>
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/configuracion-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Campañas
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="campanas-enterprise"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
+                                    <article class="no-image">
+                                        <div class="post-wrapper">
+                                            <header class="post-header">
+                                                <a href="{{url}}">
+                                                    <p class="blog-title">{{> "icons/chevron-right"}} {{title}}</p>
+                                                </a>
+                                            </header>
+                                        </div>
+                                    </article>
+                                {{/has}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </li>
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/campanas-enterprise/">
                             Campañas
                         </a>
@@ -123,14 +190,25 @@
                 <li class="topic-article">
                     <h3 class="topic-article-title">
                         <a class="topic-article-link" href="/tag/templates-enterprise">
+=======
+                        <a class="topic-article-link" href="/tag/templates">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                             Templates
                         </a>
                     </h3>
 
+<<<<<<< HEAD
                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="templates"}}
+=======
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="templates-enterprise"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -147,15 +225,27 @@
                 </li>
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/tablero-enterprise/">
+=======
+                        <a class="topic-article-link" href="/tablero-enterprise/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                             Tablero e información adicional
                         </a>
                     </h3>
 
+<<<<<<< HEAD
                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-enterprise" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Tablero e información adicional"}}
+=======
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-enterprise" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tablero-enterprise"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -184,6 +274,7 @@
             <ul class="topic-article-feed">
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/primeros-pasos-franquicias/">
                             Primeros pasos franquicias
                         </a>
@@ -193,6 +284,18 @@
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Primeros pasos franquicias"}}
+=======
+                        <a class="topic-article-link" href="/primeros-pasos-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Primeros pasos
+                        </a>
+                    </h3>
+
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="primeros-franquicias"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -207,6 +310,7 @@
                         </div>
                     {{/get}}
                 </li>
+<<<<<<< HEAD
 
                 <li class="topic-article">
                     <h3 class="topic-article-title">
@@ -237,14 +341,27 @@
                 <li class="topic-article">
                     <h3 class="topic-article-title">
                         <a class="topic-article-link" href="/tag/usuarios-franquicias">
+=======
+                <li class="topic-article">
+                    <h3 class="topic-article-title">
+                        <a class="topic-article-link" href="/tag/usuarios-permisos">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                             Usuarios y permisos
                         </a>
                     </h3>
 
+<<<<<<< HEAD
                      {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="usuarios y permisos"}}
+=======
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="usuarios-franquicias"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -261,6 +378,7 @@
                 </li>
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/configuracion-franquicias/">
                             Configuración
                         </a>
@@ -270,6 +388,18 @@
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="configuracion"}}
+=======
+                        <a class="topic-article-link" href="/configuracion-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+                            Configuracion
+                        </a>
+                    </h3>
+
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="configuracion-franquicias"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -286,15 +416,27 @@
                 </li>
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/tienda-franquicias/">
+=======
+                        <a class="topic-article-link" href="/tag/tienda">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                             Tienda
                         </a>
                     </h3>
 
+<<<<<<< HEAD
                      {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="tienda"}}
+=======
+                     {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tienda-franquicias"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -311,15 +453,27 @@
                 </li>
                 <li class="topic-article">
                     <h3 class="topic-article-title">
+<<<<<<< HEAD
                         <a class="topic-article-link" href="/tag/graficas-franquicias">
+=======
+                        <a class="topic-article-link" href="/tablero-franquicias/">
+                        {{!-- <a class="topic-article-link" href="{{url}}"> --}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                             Gráficas e información adicional
                         </a>
                     </h3>
 
+<<<<<<< HEAD
                     {{#get "posts" include="tags" order="published_at desc" filter="tag:hash-franquicias" as |post|}}
                         <div class="gh-canvas">
                             {{#foreach post}}
                                 {{#has tag="Gráficas e información adicional"}}
+=======
+                    {{#get "posts" limit="5" include="tags" order="published_at asc" filter="tag:hash-franquicias" as |post|}}
+                        <div class="gh-canvas">
+                            {{#foreach post}}
+                                {{#has tag="tienda-franquicias"}}
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
                                     <article class="no-image">
                                         <div class="post-wrapper">
                                             <header class="post-header">
@@ -346,6 +500,7 @@
 
 </main>
 </div>
+<<<<<<< HEAD
 
 
 
@@ -369,3 +524,5 @@
 
 
 
+=======
+>>>>>>> e884252dedbf7efefcd82a22e87e3825cc038353
